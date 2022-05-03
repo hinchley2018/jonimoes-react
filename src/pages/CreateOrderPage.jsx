@@ -3,7 +3,14 @@ import { createOrder } from "../api/orders-api"
 export default function CreateOrderPage(){
     const handleSubmit = async () => {
         let order = {}
-        let orderResponse = await createOrder(order)
+        try {
+            let orderResponse = await createOrder(order)
+            window.alert("Order successful")    
+        } catch (error) {
+            window.alert("Order failed")
+        }
+        
+        
     }
     return (
         <div>
