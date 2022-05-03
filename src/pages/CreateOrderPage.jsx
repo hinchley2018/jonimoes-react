@@ -5,6 +5,7 @@ export default function CreateOrderPage(){
         let order = {}
         try {
             let orderResponse = await createOrder(order)
+            console.log(orderResponse)
             window.alert("Order successful")    
         } catch (error) {
             window.alert("Order failed")
