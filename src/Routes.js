@@ -1,14 +1,15 @@
-import { Route } from "react-router-dom";
-import { Switch } from "react-router-dom";
+import { Route,Switch } from "react-router-dom";
+
 import CreateOrderPage from './pages/CreateOrderPage'
 import ReviewOrdersPage from "./pages/ReviewOrdersPage";
-export default function Routes(){
+export const Routes = () => {
     return(
         <Switch>
-            <Route exact path={"/"} component={ReviewOrdersPage}/>
+            <Route exact path="/" component={CreateOrderPage}/>
             <Route path={"/create-order"} component={CreateOrderPage}/>
             <Route path={"/orders"} component={ReviewOrdersPage}/>
             
         </Switch>
     )
 }
+export default Routes;
